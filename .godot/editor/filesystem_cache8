@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1745484883
+icon.svg::CompressedTexture2D::9207908367132533966::1743669597::1745484885::1::::<><>::
+obstacle.svg::CompressedTexture2D::5485621870879603402::1745398205::1745484885::1::::<><>::
+::res://Instances/::1745399227
+obstakel.gd::GDScript::-1::1745398599::0::1::::Obstakel<>Area2D<>::
+obstakel.tscn::PackedScene::7177273811581287824::1745399227::0::1::::<><>::res://Instances/obstakel.gd<>uid://ckfjnjygv0bdi::::res://obstacle.svg
+speler.gd::GDScript::-1::1745399143::0::1::::<>CharacterBody2D<>::
+speler.tscn::PackedScene::1133193916623190186::1745399227::0::1::::<><>::uid://d4gm511lr2bhu::::res://icon.svg<>res://Instances/speler.gd
+::res://levels/::1745484512
+level_1.tscn::PackedScene::8326386553288408185::1745484512::0::1::::<><>::uid://qe6skhgjpt35::::res://Instances/speler.tscn<>uid://daiywevofdm1e::::res://Instances/obstakel.tscn
