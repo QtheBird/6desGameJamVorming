@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxilodem4ppah"]
+[gd_scene load_steps=5 format=3 uid="uid://gj1gm5xya5w6"]
 
-[ext_resource type="Script" path="res://UserInterface/start_scherm.gd" id="1_bh4yi"]
+[ext_resource type="Script" path="res://UserInterface/game_over.gd" id="1_om3y6"]
 
 [sub_resource type="Animation" id="Animation_2dole"]
 length = 0.001
@@ -39,14 +39,14 @@ _data = {
 "idle_startButton": SubResource("Animation_g13ci")
 }
 
-[node name="startScherm" type="Control"]
+[node name="gameOver" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bh4yi")
+script = ExtResource("1_om3y6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -55,7 +55,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.443137, 0.6, 0.560784, 1)
+color = Color(0.968627, 0.368627, 0.372549, 0.403922)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -75,14 +75,14 @@ alignment = 1
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Naam Game"
+text = "Game Over"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 modulate = Color(1, 1, 1, 0.207843)
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
-text = "START"
+text = "try again"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/Button"]
 libraries = {

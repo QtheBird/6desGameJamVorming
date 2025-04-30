@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://qe6skhgjpt35"]
+[gd_scene load_steps=6 format=3 uid="uid://qe6skhgjpt35"]
 
 [ext_resource type="Texture2D" uid="uid://d4gm511lr2bhu" path="res://icon.svg" id="1_h3os8"]
 [ext_resource type="Script" path="res://Instances/speler.gd" id="1_swham"]
+[ext_resource type="PackedScene" uid="uid://gj1gm5xya5w6" path="res://UserInterface/game_over.tscn" id="3_s07o7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8j2k"]
 size = Vector2(113, 112)
@@ -25,5 +26,8 @@ shape = SubResource("RectangleShape2D_u8j2k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_epplb")
+
+[node name="gameOver" parent="." instance=ExtResource("3_s07o7")]
+visible = false
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

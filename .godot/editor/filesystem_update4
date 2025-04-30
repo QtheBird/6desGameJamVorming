@@ -1,5 +1,5 @@
 res://levels/level_1.tscn
-res://Instances/speler.gd
 res://Instances/speler.tscn
-res://UserInterface/start_scherm.gd
 res://UserInterface/start_scherm.tscn
+res://UserInterface/game_over.gd
+res://UserInterface/game_over.tscn
