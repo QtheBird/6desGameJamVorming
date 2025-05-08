@@ -4,12 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://ckfjnjygv0bdi" path="res://obstacle.svg" id="1_ysod8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bony7"]
+size = Vector2(110, 113)
 
 [node name="Obstakel" type="Area2D"]
 script = ExtResource("1_oiyex")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_bony7")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ysod8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_bony7")

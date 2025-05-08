@@ -1,5 +1,7 @@
-ColorRect
+AudioStreamPlayer2D
+CanvasLayer
 AnimationPlayer
+ColorRect
 Button
 Label
 VBoxContainer

@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://bh7dbo7uyxhoh"]
+
+[ext_resource type="Texture2D" uid="uid://3plpcscq865v" path="res://DangerObstacle.svg" id="1_luleb"]
+[ext_resource type="Script" path="res://Instances/dangerObstakel.gd" id="1_tync8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bony7"]
+size = Vector2(125.423, 121.326)
+
+[sub_resource type="Animation" id="Animation_oh56u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_q04im"]
+resource_name = "spin"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ihrv7"]
+_data = {
+"RESET": SubResource("Animation_oh56u"),
+"spin": SubResource("Animation_q04im")
+}
+
+[node name="DangerObstakel" type="Area2D"]
+rotation = 6.28319
+script = ExtResource("1_tync8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_luleb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.265733, 0.689458)
+shape = SubResource("RectangleShape2D_bony7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ihrv7")
+}
+autoplay = "spin"

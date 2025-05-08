@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://qe6skhgjpt35"]
+[gd_scene load_steps=7 format=3 uid="uid://qe6skhgjpt35"]
 
 [ext_resource type="Texture2D" uid="uid://d4gm511lr2bhu" path="res://icon.svg" id="1_h3os8"]
 [ext_resource type="Script" path="res://Instances/speler.gd" id="1_swham"]
 [ext_resource type="PackedScene" uid="uid://gj1gm5xya5w6" path="res://UserInterface/game_over.tscn" id="3_s07o7"]
+[ext_resource type="AudioStream" uid="uid://c4mk62slnk468" path="res://SNAP.mp3" id="4_w1f15"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8j2k"]
 size = Vector2(113, 112)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_epplb"]
-radius = 72.111
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5sjy"]
+size = Vector2(120, 118)
 
 [node name="speler" type="CharacterBody2D"]
 script = ExtResource("1_swham")
@@ -25,9 +26,15 @@ shape = SubResource("RectangleShape2D_u8j2k")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_epplb")
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_d5sjy")
 
-[node name="gameOver" parent="." instance=ExtResource("3_s07o7")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="gameOver" parent="CanvasLayer" instance=ExtResource("3_s07o7")]
 visible = false
+
+[node name="snapSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_w1f15")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

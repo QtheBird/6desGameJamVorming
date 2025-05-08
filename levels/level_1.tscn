@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqvmmt00tgajh"]
+[gd_scene load_steps=4 format=3 uid="uid://dqvmmt00tgajh"]
 
 [ext_resource type="PackedScene" uid="uid://qe6skhgjpt35" path="res://Instances/speler.tscn" id="1_gbjyp"]
 [ext_resource type="PackedScene" uid="uid://daiywevofdm1e" path="res://Instances/obstakel.tscn" id="2_pdfls"]
+[ext_resource type="PackedScene" uid="uid://bh7dbo7uyxhoh" path="res://Instances/dangerObstakel.tscn" id="3_dtmmy"]
 
 [node name="level1" type="Node2D"]
 
@@ -13,3 +14,15 @@ position = Vector2(355, 121)
 
 [node name="Obstakel2" parent="." instance=ExtResource("2_pdfls")]
 position = Vector2(296, -60)
+
+[node name="DangerObstakel" parent="." instance=ExtResource("3_dtmmy")]
+position = Vector2(554, -21)
+rotation = 6.28319
+
+[node name="DangerObstakel2" parent="." instance=ExtResource("3_dtmmy")]
+position = Vector2(-332, 54)
+rotation = 6.28319
+
+[node name="DangerObstakel3" parent="." instance=ExtResource("3_dtmmy")]
+position = Vector2(-171, -239)
+rotation = 6.28319
